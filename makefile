@@ -4,9 +4,8 @@ WaveFunctionCollapse-master:
 	rm master.zip
 
 bitmaps: WaveFunctionCollapse-master
-	go run cmd/main/main.go \
-	-i WaveFunctionCollapse-master/samples.xml \
-	-t WaveFunctionCollapse-master/samples
+	cd WaveFunctionCollapse-master && \
+	go run ../cmd/main/main.go -o ../out
 
 clean:
 	rm -rf WaveFunctionCollapse-master

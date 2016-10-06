@@ -37,8 +37,8 @@ var (
 var random *rand.Rand
 
 func init() {
-	flag.StringVar(&inputFile, "i", "", "xml file containing texture jobs")
-	flag.StringVar(&textureDir, "t", "", "directory containing texture images")
+	flag.StringVar(&inputFile, "i", "samples.xml", "xml file containing texture jobs")
+	flag.StringVar(&textureDir, "t", "samples", "directory containing texture images")
 	flag.StringVar(&outputDir, "o", "./out", "output directory")
 
 	flag.StringVar(&filterStr, "f", "", "only run jobs matching argument")
