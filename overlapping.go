@@ -5,6 +5,7 @@ import (
 	"image/color"
 	_ "image/png"
 	"os"
+	"path/filepath"
 )
 
 type Overlapping struct {
@@ -23,7 +24,7 @@ type Overlapping struct {
 	Model
 }
 
-func NewOverlapping(name string, N, width, height int, periodicInput, periodicOutput bool, symmetry, ground int) *Overlapping {
+func NewOverlapping(path, name string, N, width, height int, periodicInput, periodicOutput bool, symmetry, ground int) *Overlapping {
 	om := &Overlapping{
 		N:        N,
 		periodic: periodicOutput,
@@ -33,7 +34,7 @@ func NewOverlapping(name string, N, width, height int, periodicInput, periodicOu
 
 	om.Model = NewModel(om)
 
-	bitmap, err := openBMP("samples/" + name + ".png")
+	bitmap, err := openBMP(filepath.Join(path, name+".png"))
 	if err != nil {
 		panic(err)
 	}

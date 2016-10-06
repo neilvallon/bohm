@@ -1,11 +1,13 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"image"
 	"log"
 	"math/rand"
 	"os"
+	"path/filepath"
 	"time"
 
 	"image/png"
@@ -31,10 +33,33 @@ var (
 	}
 )
 
-var random = rand.New(rand.NewSource(time.Now().UnixNano()))
+var random *rand.Rand
+
+func init() {
+	flag.StringVar(&inputFile, "i", "", "xml file containing texture jobs")
+	flag.StringVar(&textureDir, "t", "", "directory containing texture images")
+	flag.StringVar(&outputDir, "o", "./out", "output directory")
+
+	flag.Parse()
+
+	if inputFile == "" || textureDir == "" {
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+
+	if err := os.MkdirAll(outputDir, 0755); err != nil {
+		panic(err)
+	}
+
+	seed := time.Now().UnixNano()
+	random = rand.New(rand.NewSource(seed))
+	log.Printf("SEED: %q\n", shortening.Encode(uint64(seed)))
+}
+
+var inputFile, textureDir, outputDir string
 
 func main() {
-	cfg, err := config.Read("./samples.xml")
+	cfg, err := config.Read(inputFile)
 	if err != nil {
 		panic(err)
 	}
@@ -52,12 +77,12 @@ func main() {
 		switch s.XMLName.Local {
 		case "overlapping":
 			s.Set(overlappingDefaults)
-			m = bohm.NewOverlapping(s.Name, s.N,
+			m = bohm.NewOverlapping(textureDir, s.Name, s.N,
 				s.Width, s.Height, *s.PeriodicInput, s.Periodic, s.Symmetry, s.Ground)
 
 		case "simpletiled":
 			s.Set(tiledDefaults)
-			m = bohm.NewTiled(s.Name, s.Subset, s.Width, s.Height, s.Periodic, s.Black)
+			m = bohm.NewTiled(textureDir, s.Name, s.Subset, s.Width, s.Height, s.Periodic, s.Black)
 
 		default:
 			log.Println(s.XMLName.Local, "not implemented")
@@ -67,7 +92,7 @@ func main() {
 		for i := 0; i < s.Screenshots; i++ {
 			for k := 0; k < 10; k++ {
 				seed := random.Int63()
-				ident := fmt.Sprintf("%d %s-%s %d", count, s.Name, shortening.Encode(uint64(seed)), i)
+				ident := fmt.Sprintf("%d %s+%s %d", count, s.Name, shortening.Encode(uint64(seed)), i)
 				if m.Run(seed, s.Limit) {
 					log.Printf("[%s]\tDONE\n", ident)
 
@@ -76,7 +101,7 @@ func main() {
 						panic(err)
 					}
 
-					saveImage("out/"+ident+".png", img)
+					saveImage(filepath.Join(outputDir, ident+".png"), img)
 					break
 				} else {
 					log.Printf("[%s]\tCONTRADICTION\n", ident)

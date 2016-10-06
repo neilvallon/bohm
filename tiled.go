@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	"path/filepath"
 	"strconv"
 
 	"vallon.me/bohm/config"
@@ -26,7 +27,7 @@ type Tiled struct {
 	Model
 }
 
-func NewTiled(name, subsetName string, width, height int, periodic, black bool) *Tiled {
+func NewTiled(path, name, subsetName string, width, height int, periodic, black bool) *Tiled {
 	tm := &Tiled{
 		FM:       Point{width, height},
 		periodic: periodic,
@@ -35,7 +36,7 @@ func NewTiled(name, subsetName string, width, height int, periodic, black bool) 
 
 	tm.Model = NewModel(tm)
 
-	tileCfg := config.ReadTileData("samples/" + name + "/data.xml")
+	tileCfg := config.ReadTileData(filepath.Join(path, name, "data.xml"))
 	if tileCfg.Size == 0 {
 		tileCfg.Size = 16
 	}
@@ -109,11 +110,11 @@ func NewTiled(name, subsetName string, width, height int, periodic, black bool) 
 
 		if tileCfg.Unique {
 			for t := 0; t < cardinality; t++ {
-				file := fmt.Sprintf("samples/%s/%s %d.png", name, tile.Name, t)
+				file := filepath.Join(path, name, fmt.Sprintf("%s %d.png", tile.Name, t))
 				tm.tiles = append(tm.tiles, textureDef{name: file, size: tm.tileSize})
 			}
 		} else {
-			file := fmt.Sprintf("samples/%s/%s.png", name, tile.Name)
+			file := filepath.Join(path, name, tile.Name+".png")
 			for t := 0; t < cardinality; t++ {
 				tm.tiles = append(tm.tiles, textureDef{
 					name:        file,
