@@ -1,0 +1,120 @@
+BenchmarkTiledCreate/Summer-8     	  100000	    523659 ns/op	   93384 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1274172 ns/op	  242750 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 375613649 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5062049475 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19271365 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8695157 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19383515 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8789753 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393741247 ns/op	 2256038 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5061274727 ns/op	 1165811 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	479.142s
+BenchmarkTiledCreate/Summer-8     	  100000	    509951 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1256501 ns/op	  242750 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 373815486 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5045243367 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19290827 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8713688 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19327010 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8700656 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393379615 ns/op	 2256037 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5057748870 ns/op	 1165792 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	475.987s
+BenchmarkTiledCreate/Summer-8     	  100000	    508778 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1251662 ns/op	  242744 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 373645160 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5048194829 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19358845 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8711220 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19256879 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8686804 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393203722 ns/op	 2256039 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5066648675 ns/op	 1165768 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	475.696s
+BenchmarkTiledCreate/Summer-8     	  100000	    510150 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1267894 ns/op	  242750 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 374750922 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5079637026 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19596903 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8740448 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19475039 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8828698 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 394994127 ns/op	 2256018 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5071158369 ns/op	 1165851 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	478.971s
+BenchmarkTiledCreate/Summer-8     	  100000	    517753 ns/op	   93384 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1305097 ns/op	  242745 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 377599108 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5052892310 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19304860 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8699345 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19337890 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8733388 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393624575 ns/op	 2255994 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5057221319 ns/op	 1165811 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	479.230s
+BenchmarkTiledCreate/Summer-8     	  100000	    511627 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1257225 ns/op	  242754 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 374035917 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5047354314 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19309736 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8694980 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19249794 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8704178 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393926460 ns/op	 2256039 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5056667114 ns/op	 1165809 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	476.129s
+BenchmarkTiledCreate/Summer-8     	  100000	    510629 ns/op	   93384 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1264034 ns/op	  242744 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 374542738 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5049471757 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19326950 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8715945 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19539067 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8825754 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 395115669 ns/op	 2256016 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5075507882 ns/op	 1165787 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	478.105s
+BenchmarkTiledCreate/Summer-8     	  100000	    521404 ns/op	   93384 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1288378 ns/op	  242750 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 374560383 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5178681872 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  20077827 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   9161897 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19648946 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8749342 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393633790 ns/op	 2256044 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5060029818 ns/op	 1165808 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	485.011s
+BenchmarkTiledCreate/Summer-8     	  100000	    510433 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1277257 ns/op	  242752 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 373890212 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5045727678 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19265727 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8817415 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19235700 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8696203 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393341550 ns/op	 2256043 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5053752487 ns/op	 1165832 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	476.967s
+BenchmarkTiledCreate/Summer-8     	  100000	    509416 ns/op	   93383 B/op	    1671 allocs/op
+BenchmarkTiledCreate/Circuit-8    	   30000	   1256811 ns/op	  242750 B/op	    4434 allocs/op
+BenchmarkTiledRun/Summer-8        	     100	 373981762 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledRun/Circuit-8       	      10	5044400868 ns/op	    5408 B/op	       2 allocs/op
+BenchmarkTiledGraphics/Summer-8   	    2000	  19241902 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphics/Circuit-8  	    5000	   8675773 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Summer-8  	    2000	  19214969 ns/op	 2154560 B/op	       3 allocs/op
+BenchmarkTiledGraphicsNoCache/Graphics/Circuit-8 	    5000	   8687493 ns/op	  915776 B/op	       3 allocs/op
+BenchmarkTiledFull/Summer-8                      	     100	 393320657 ns/op	 2256052 B/op	    1689 allocs/op
+BenchmarkTiledFull/Circuit-8                     	      10	5059630151 ns/op	 1165851 B/op	    4449 allocs/op
+PASS
+ok  	vallon.me/bohm	475.384s
