@@ -5,7 +5,7 @@ WaveFunctionCollapse-master:
 
 bitmaps: WaveFunctionCollapse-master
 	cd WaveFunctionCollapse-master && \
-	go run ../cmd/main/main.go -o ../out
+	go run ../cmd/bohm/main.go -o ../out
 
 clean:
 	rm -rf WaveFunctionCollapse-master
