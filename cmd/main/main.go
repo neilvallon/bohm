@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"image/png"
@@ -40,6 +41,8 @@ func init() {
 	flag.StringVar(&textureDir, "t", "", "directory containing texture images")
 	flag.StringVar(&outputDir, "o", "./out", "output directory")
 
+	flag.StringVar(&filterStr, "f", "", "only run jobs matching argument")
+
 	flag.Parse()
 
 	if inputFile == "" || textureDir == "" {
@@ -56,7 +59,7 @@ func init() {
 	log.Printf("SEED: %q\n", shortening.Encode(uint64(seed)))
 }
 
-var inputFile, textureDir, outputDir string
+var inputFile, textureDir, outputDir, filterStr string
 
 func main() {
 	cfg, err := config.Read(inputFile)
@@ -67,6 +70,10 @@ func main() {
 	count := 1
 	for _, s := range cfg.Samples {
 		name := s.Name
+		if !strings.Contains(name, filterStr) {
+			continue
+		}
+
 		log.Println(name)
 
 		var m interface {
